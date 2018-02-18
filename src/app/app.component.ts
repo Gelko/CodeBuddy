@@ -12,8 +12,12 @@ export class AppComponent {
   entityName = "Building";
   entityNamePlural = "Buildings"
   code : string;
+  
+  // const uuidv1 = require('uuid/v1');
 
   generateTemplate() {
+    
+    console.log(this.uuidv1());
     console.log(this.moduleName);
     this.code = '{\r\n'
     this.code += '  "guid": "84C83D99-7D90-4FAE-9B7F-3D3B6CEBBC92",\r\n'
