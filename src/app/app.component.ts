@@ -13,12 +13,7 @@ export class AppComponent {
   entityNamePlural = "Buildings"
   code : string;
   
-  // const uuidv1 = require('uuid/v1');
-
   generateTemplate() {
-    
-    console.log(this.uuidv1());
-    console.log(this.moduleName);
     this.code = '{\r\n'
     this.code += '  "guid": "84C83D99-7D90-4FAE-9B7F-3D3B6CEBBC92",\r\n'
     this.code += '  "label\": "resx:Portego.' + this.moduleName + '.Localization.' + this.moduleName + '.' + this.entityName + '_PageLabel,\r\n'
@@ -29,6 +24,9 @@ export class AppComponent {
     this.code += '    "state": "' + this.moduleName.toLowerCase() + '-' + this.entityName.toLowerCase() + '-list",\r\n'
     this.code += '    "url": "/' + this.moduleName.toLowerCase() + '/' + this.entityNamePlural.toLowerCase() + '",\r\n'
     this.code += '    "template": "/Template/' + this.entityName + '/' + this.entityName + 'List",\r\n' 
+    this.code += '    "controller": "' + this.moduleName + '.' + this.moduleName + 'ListCtrl\r\n'
+    this.code += '   }\r\n'
+    this.code += '}'
   }
 
 }
