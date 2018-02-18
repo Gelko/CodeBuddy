@@ -1,10 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class>
-<div >
- Module name: <input [(ngModel)]="moduleName">
- Entity name: <input [(ngModel)]="entityName">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      Module name: <input [(ngModel)]="moduleName">
+    </div>
+    <div class="col-md-4">
+      Entity name: <input [(ngModel)]="entityName">
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    Page type: <button>List</button><button>Create/Edit</button><button>Dashboard</button>
+  </div>
+  <div class="row">
+      <button (click)='generateTemplate()'>Template</button>
+      <button>Angular controller</button>
+      <button>JSON</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <textarea [(ngModel)]="code" style="width:100%;" rows="20"></textarea>
+    </div>
+  </div>
 </div>
-<div>
-</div><button></button>
-</div>
-
